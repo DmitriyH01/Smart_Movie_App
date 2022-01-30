@@ -1,15 +1,5 @@
-export {
-  store,
-  defaultState,
-  getUsersFromApi,
-  getNextUsersFromApi,
-  sortUsersAsc,
-  sortUsersDsc,
-  sortUsersBySpecies,
-  sortUsersByGender,
-  sortUsersByStatus,
-  reset,
-  findUser,
-} from "./usersReducer";
+const defaultStore = {
+  moviesFromApi: null,
+};
 
-export { store } from "./store";
+export default defaultStore;
