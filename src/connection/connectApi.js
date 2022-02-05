@@ -1,4 +1,4 @@
-import { getMovies, getMoviesFromApi } from "../services/redux";
+import { getMoviesFromApi } from "../services/redux";
 
 const connectToApi = (url) => {
   return (dispatch) =>
