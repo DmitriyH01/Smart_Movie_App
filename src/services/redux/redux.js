@@ -1,19 +1,27 @@
-import { ReactDOM } from "react-dom";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 import defaultStore from "../../store";
+import thunk from "redux-thunk";
+import convertGetMoviesFromApi from "../../utils/convertGetMovies";
 
-// action = { type: "", payload: "" };
+const GET_MOVIES = "GET_MOVIES";
 
 const reducer = (state = defaultStore, action) => {
   switch (action.type) {
-    case "GET_MOVIES":
-      return { ...state, moviesFromApi: state.moviesFromApi + action.payload };
+    case GET_MOVIES:
+      return {
+        ...state,
+        moviesFromApi: [convertGetMoviesFromApi(action.payload)], // without state.moviesFromApi because don't need null.
+      };
 
     default:
-      state;
+      return state;
   }
 };
 
-const store = createStore(reducer);
+export const getMoviesFromApi = (payload) => ({ type: GET_MOVIES, payload });
 
-export default store;
+export const store = createStore(
+  reducer,
+  composeWithDevTools(applyMiddleware(thunk))
+);

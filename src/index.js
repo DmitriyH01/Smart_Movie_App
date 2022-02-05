@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import store from "./services/redux/redux";
+import { store } from "./services/redux";
 import "./index.css";
 import MainContainer from "./containers/MainContainer";
 

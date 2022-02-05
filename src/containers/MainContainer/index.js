@@ -1,11 +1,10 @@
 import { Fragment } from "react";
-import MoviesContainer from "../MoviesContainer";
+import ShowMoviesPosters from "../../components/ShowMoviesPosters";
 
 const MainContainer = () => {
-  // connectToApi(`${MainURL + PopularMovies + ApiKey}`);
   return (
     <Fragment>
-      <MoviesContainer />
+      <ShowMoviesPosters />
     </Fragment>
   );
 };
