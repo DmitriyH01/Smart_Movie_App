@@ -1,0 +1,4 @@
+export const MOVIES = {
+  GET_START: 'MOVIES.GET_START',
+  GET_SUCCESS: 'MOVIES.GET_SUCCESS',
+};
