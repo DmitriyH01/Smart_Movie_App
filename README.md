@@ -1,8 +1,8 @@
-# Rick and Morty App
+# Smart_Movies_App
 
 ## About project
 
-- simulate a simple friend search site, with clickable cards;
+- simulate a simple films desktop app;
 - React use;
 - Redux use;
 
