@@ -1,5 +1,5 @@
-import { MOVIES } from '.';
-import { MainURL, ApiKey, PopularMovies } from '../constant/urls';
+import { MOVIES } from ".";
+import { MainURL, ApiKey, PopularMovies } from "../constant/URLs";
 
 const getMoviesStart = () => ({
   type: MOVIES.GET_START,

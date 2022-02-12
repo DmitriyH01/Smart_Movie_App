@@ -1,0 +1,21 @@
+.posters_list {
+  display: grid;
+  height: max-content;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  list-style-type: none;
+  // background: rgba(161, 21, 207, 0.5);
+
+  &_item {
+    display: grid;
+    font-size: 22px;
+    // background: rgba(161, 21, 207, 0.5);
+    // border: solid 2px;
+    // border-color: white;
+    padding: 30px;
+    & h2 {
+      color: white;
+      text-align: center;
+    }
+  }
+}

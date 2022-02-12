@@ -19,6 +19,7 @@ const MoviesContainer = () => {
   }
 
   const data = getData(movies, []);
+  console.log(movies);
 
   return <MoviesPosters posters={data} />;
 };

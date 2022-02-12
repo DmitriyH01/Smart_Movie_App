@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
+import 
 
 const MoviePoster = ({ poster }) => {
   const { title, backdropPath, overview, voteAverage } = poster;
 
   return (
-    <li>
+    <li className="posters_list_item">
       <h2>{title}</h2>
-      {/* <img src={} alt={poster.poster_path}></img> */}
-      <span>backround_img:{backdropPath}</span>
+      <img src={} alt={poster.poster_path}></img>
+      {/* <span>backround_img:{backdropPath}</span> */}
       <br></br>
       <span>{overview}</span>
       <br></br>

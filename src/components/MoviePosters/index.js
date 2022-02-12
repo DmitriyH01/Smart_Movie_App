@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import MoviePoster from './MoviePoster';
+import MoviePoster from "./MoviePoster";
 
 const MoviePosters = ({ posters }) => {
   return (
-    <ul>
+    <ul className="posters_list">
       {posters.map((poster) => (
         <MoviePoster key={poster.title} poster={poster} />
       ))}
