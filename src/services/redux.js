@@ -1,6 +1,15 @@
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk';
-import {reducer} from '../reducers'
+import { createStore, applyMiddleware, combineReducers } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+import thunk from "redux-thunk";
+import { filtersReducer, moviesReducer } from "../reducers";
 
-export const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
+const mainReducer = combineReducers({
+  moviesReducer,
+  filtersReducer,
+});
+
+export const store = createStore(
+  moviesReducer,
+  // mainReducer,
+  composeWithDevTools(applyMiddleware(thunk))
+);

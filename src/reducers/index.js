@@ -1,1 +1,2 @@
-export { default as reducer } from './movies';
+export { filters as filtersReducer } from "./filters";
+export { movies as moviesReducer } from "./movies";

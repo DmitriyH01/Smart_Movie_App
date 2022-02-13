@@ -1,5 +1,6 @@
 @import "styles/header.scss";
 @import "styles/posters.scss";
+@import "styles/filters.scss";
 
 body {
   margin: 0 auto;
@@ -10,8 +11,9 @@ body {
   background-repeat: no-repeat;
 
   & #root {
-    min-height: 100vh;
     display: grid;
-    grid-template-rows: 15% 60% 25%;
+    grid-template-rows: 20%, 80%;
+    min-height: 100vh;
+    // grid-template-rows: 15% 60% 25%;
   }
 }

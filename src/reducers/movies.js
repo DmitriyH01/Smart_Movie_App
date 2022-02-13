@@ -1,12 +1,13 @@
-import { MOVIES } from '../actions/index';
-import { performMovies } from '../utils/api/movies';
-import { getLoadingState, getReadyState } from '../utils/store';
+import { MOVIES } from "../actions/index";
+import { performMovies } from "../utils/api/movies";
+import { getLoadingState, getReadyState } from "../utils/store";
 
-const initialStore = {
+export const initialStore = {
   movies: {},
+  filteredMovies: {},
 };
 
-const movies = (state = initialStore, action) => {
+export const movies = (state = initialStore.movies, action) => {
   switch (action.type) {
     case MOVIES.GET_START:
       return {
@@ -24,5 +25,3 @@ const movies = (state = initialStore, action) => {
       return state;
   }
 };
-
-export default movies;

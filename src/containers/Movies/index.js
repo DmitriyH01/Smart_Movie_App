@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-import { getMovies } from '../../actions/movies';
-import { hasData, getData } from '../../utils/store';
+import { getMovies } from "../../actions/movies";
+import { hasData, getData } from "../../utils/store";
 
-import { MoviesPosters, Loader } from '../../components';
+import { MoviesPosters, Loader } from "../../components";
 
 const MoviesContainer = () => {
   const dispatch = useDispatch();
@@ -19,7 +19,6 @@ const MoviesContainer = () => {
   }
 
   const data = getData(movies, []);
-  console.log(movies);
 
   return <MoviesPosters posters={data} />;
 };
