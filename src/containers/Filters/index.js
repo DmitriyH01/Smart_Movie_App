@@ -4,8 +4,8 @@ import { hasData, isLoaded, getData } from "../../utils/store";
 
 const FiltersContainer = () => {
   // const { movies } = useSelector((state) => state);
-  // const { filteredMovies } = useSelector((state) => state);
-  // console.log(movies);
+  const { filteredMovies } = useSelector((state) => state.filtersReducer);
+  console.log(filteredMovies);
 
   // console.log(filteredMovies);
   // if (isLoaded(movies)) {
