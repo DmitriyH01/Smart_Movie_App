@@ -8,7 +8,7 @@ import { MoviesPosters, Loader } from "../../components";
 
 const MoviesContainer = () => {
   const dispatch = useDispatch();
-  const { movies } = useSelector((state) => state);
+  const { movies } = useSelector((state) => state.moviesReducer);
 
   useEffect(() => {
     dispatch(getMovies());

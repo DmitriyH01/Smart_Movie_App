@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { hasData, isLoaded, getData } from "../../utils/store";
 
 const FiltersContainer = () => {
-  const { movies } = useSelector((state) => state);
-  const { filteredMovies } = useSelector((state) => state);
-  console.log(movies);
+  // const { movies } = useSelector((state) => state);
+  // const { filteredMovies } = useSelector((state) => state);
+  // console.log(movies);
 
   // console.log(filteredMovies);
   // if (isLoaded(movies)) {

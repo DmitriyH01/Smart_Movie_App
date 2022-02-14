@@ -9,7 +9,6 @@ const mainReducer = combineReducers({
 });
 
 export const store = createStore(
-  moviesReducer,
-  // mainReducer,
+  mainReducer,
   composeWithDevTools(applyMiddleware(thunk))
 );

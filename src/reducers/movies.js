@@ -7,7 +7,7 @@ export const initialStore = {
   filteredMovies: {},
 };
 
-export const movies = (state = initialStore.movies, action) => {
+export const movies = (state = initialStore, action) => {
   switch (action.type) {
     case MOVIES.GET_START:
       return {
