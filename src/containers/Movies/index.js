@@ -1,24 +1,22 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
 import { getMovies } from "../../actions/movies";
 import { hasData, getData } from "../../utils/store";
-
 import { MoviesPosters, Loader } from "../../components";
 
 const MoviesContainer = () => {
   const dispatch = useDispatch();
-  const { movies } = useSelector((state) => state.moviesReducer);
+  const { filtersMovies } = useSelector((state) => state.moviesReducer);
 
   useEffect(() => {
     dispatch(getMovies());
   }, []);
 
-  if (!hasData(movies)) {
+  if (!hasData(filtersMovies)) {
     return <Loader />;
   }
 
-  const data = getData(movies, []);
+  const data = getData(filtersMovies, []);
 
   return <MoviesPosters posters={data} />;
 };

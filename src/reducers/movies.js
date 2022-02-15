@@ -18,7 +18,8 @@ export const movies = (state = initialStore, action) => {
     case MOVIES.GET_SUCCESS:
       return {
         ...state,
-        movies: getReadyState(performMovies(action.data)),
+        movies: getReadyState(action.data),
+        filtersMovies: getReadyState(performMovies(action.data)),
       };
 
     default:

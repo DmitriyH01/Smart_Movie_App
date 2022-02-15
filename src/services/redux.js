@@ -1,11 +1,11 @@
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
-import { filtersReducer, moviesReducer } from "../reducers";
+import { moviesReducer } from "../reducers";
 
 const mainReducer = combineReducers({
   moviesReducer,
-  filtersReducer,
+  // filtersReducer,
 });
 
 export const store = createStore(
