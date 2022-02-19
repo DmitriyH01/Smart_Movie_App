@@ -6,7 +6,6 @@ import { store } from "./services/redux";
 import "./index.css";
 import Movies from "./containers/Movies";
 import Filters from "./containers/Filters";
-import HeaderContainer from "./containers/HeaderContainer";
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,7 +1,7 @@
-import { MOVIES } from '../../constant/fields'
+import { MOVIES } from "../../constant/fields";
 
-export const performMovies = (raw) =>
-  raw.map((movie) => ({
+export const performMovies = (posters) =>
+  posters.map((movie) => ({
     backdropPath: movie[MOVIES.BACKDROP_PATH],
     overview: movie[MOVIES.OVERVIEW],
     posterPath: movie[MOVIES.POSTER_PATH],
@@ -9,3 +9,5 @@ export const performMovies = (raw) =>
     title: movie[MOVIES.TITLE],
     voteAverage: movie[MOVIES.VOTE_AVERAGE],
   }));
+// console.log(posters);
+// };

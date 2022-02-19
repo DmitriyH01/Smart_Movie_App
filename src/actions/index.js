@@ -4,6 +4,6 @@ export const MOVIES = {
 };
 
 export const FILTERS = {
-  SAVE_MOVIES: "FILTERS.SAVE_MOVIES",
-  IMB_SORT: "IMB_SORT",
+  IMB: "FILTERS.IMB",
+  ALL: "FILTERS.ALL",
 };

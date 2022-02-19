@@ -1,10 +1,13 @@
-import FiltersWrapper from "../../components/Flters";
+import FiltersWrapper from "../../components/Filters";
 import { useDispatch, useSelector } from "react-redux";
-import { hasData, isLoaded, getData } from "../../utils/store";
-import { useEffect } from "react";
+import { getData } from "../../utils/store";
 
 const FiltersContainer = () => {
-  return <FiltersWrapper />;
+  const dispatch = useDispatch();
+  const { filtersMovies } = useSelector((state) => state.moviesReducer);
+  const posters = getData(filtersMovies, []);
+
+  return <FiltersWrapper posters={posters} dispatch={dispatch} />;
 };
 
 export default FiltersContainer;

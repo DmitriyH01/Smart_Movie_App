@@ -1,4 +1,4 @@
-import { MOVIES } from "../actions/index";
+import { MOVIES, FILTERS } from "../actions/index";
 import { performMovies } from "../utils/api/movies";
 import { getLoadingState, getReadyState } from "../utils/store";
 
@@ -13,6 +13,7 @@ export const movies = (state = initialStore, action) => {
       return {
         ...state,
         movies: getLoadingState(state.movies),
+        filtersMovies: getLoadingState(state.movies),
       };
 
     case MOVIES.GET_SUCCESS:
@@ -20,6 +21,12 @@ export const movies = (state = initialStore, action) => {
         ...state,
         movies: getReadyState(action.data),
         filtersMovies: getReadyState(performMovies(action.data)),
+      };
+    case FILTERS.IMB:
+      console.log(action.data);
+      return {
+        ...state,
+        filtersMovies: getReadyState(performMovies([action.data])),
       };
 
     default:
