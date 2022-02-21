@@ -23,10 +23,18 @@ export const movies = (state = initialStore, action) => {
         filtersMovies: getReadyState(performMovies(action.data)),
       };
     case FILTERS.IMB:
-      console.log(action.data);
+      console.log(action.data, "приходит в редьюсер");
       return {
         ...state,
-        filtersMovies: getReadyState(performMovies([action.data])),
+        movies: getReadyState(state.movies),
+        filtersMovies: getReadyState(performMovies(action.data)),
+      };
+
+    case FILTERS.ALL:
+      return {
+        ...state,
+        movies: getReadyState(state.movies),
+        filtersMovies: getReadyState(performMovies(action.data)),
       };
 
     default:

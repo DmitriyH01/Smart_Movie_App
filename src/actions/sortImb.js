@@ -6,23 +6,30 @@ const getSelectedSuccess = (data) => ({
   data,
 });
 
-// const getUnSelectedSuccess = (data) => ({
-//   type: FILTERS.ALL,
-//   data,
-// });
+const getUnSelectedSuccess = (data) => ({
+  type: FILTERS.ALL,
+  data,
+});
 
 const sortByImb = (field, posters, dispatch) => {
-  let selected = null;
+  let selected = [];
 
   if (SEARCH_IMB_SIGN_COUNT === field.length) {
     posters.forEach((poster) => {
-      poster.voteAverage.toString() === field
-        ? dispatch(getSelectedSuccess(poster))
-        : returnFalse(posters);
+      if (poster.voteAverage.toString() === field) {
+        console.log(poster, "poster - приходит  в экшэн");
+        selected.push(poster);
+        dispatch(getSelectedSuccess(selected));
+      }
+      getUnSelectedSuccess(posters);
+
+      // poster.voteAverage.toString() === field
+      //   ? dispatch(getSelectedSuccess(poster))
+      //   : returnFalse();
     });
   }
 };
 
-const returnFalse = (posters) => {};
+const returnFalse = () => {};
 
 export default sortByImb;

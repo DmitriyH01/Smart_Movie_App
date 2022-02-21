@@ -1,9 +1,6 @@
 import sortByImb from "../../actions/sortImb";
 
 const FiltersWrapper = ({ posters, dispatch }) => {
-  console.log(posters);
-  // console.log(dispatch);
-
   return (
     <div className="filters_container">
       <input
