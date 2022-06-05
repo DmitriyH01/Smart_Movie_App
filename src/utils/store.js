@@ -24,5 +24,9 @@ export const isLoaded = (state = {}) => !!state.isLoaded;
 export const isError = (state = {}) => !!state.isError;
 export const hasData = (state = {}) => !!state.data;
 
-export const getData = (state = {}, defaultValue = {}) =>
-  state.data || defaultValue;
+export const getData = (state = {}, defaultValue = {}) => state.data || defaultValue;
+
+export const setFilteredValues = (data, actionType) => ({
+  type: actionType,
+  data,
+});

@@ -9,11 +9,13 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-
-  & #root {
-    display: grid;
-    grid-template-rows: 20%, 80%;
-    min-height: 100vh;
-    // grid-template-rows: 15% 60% 25%;
-  }
 }
+#root {
+  display: grid;
+  grid-template-rows: 20%, 80%;
+  min-height: 100vh;
+  // background-color: black;
+  // opacity: 0.2;
+  // grid-template-rows: 15% 60% 25%;
+}
+

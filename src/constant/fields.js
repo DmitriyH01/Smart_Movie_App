@@ -7,4 +7,7 @@ export const MOVIES = {
   VOTE_AVERAGE: "vote_average",
 };
 
-export const SEARCH_IMB_SIGN_COUNT = 3;
+export const nameSortInputs = {
+  start: "start_alphabet",
+  end: "end_alphabet",
+};

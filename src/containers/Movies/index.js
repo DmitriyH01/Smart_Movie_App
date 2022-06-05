@@ -7,10 +7,6 @@ import { MoviesPosters, Loader } from "../../components";
 const MoviesContainer = () => {
   const dispatch = useDispatch();
   const { filtersMovies } = useSelector((state) => state.moviesReducer);
-  console.log(
-    filtersMovies,
-    "постеры из стора в кино-контейнере запрос в стате"
-  );
 
   useEffect(() => {
     dispatch(getMovies());
@@ -21,8 +17,6 @@ const MoviesContainer = () => {
   }
 
   const data = getData(filtersMovies, []);
-  console.log(data, "постеры из стора в кино-контейнере");
-
   return <MoviesPosters posters={data} />;
 };
 
